@@ -22,32 +22,98 @@ header {
   justify-content: space-between;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Styling Navbar */
+.navbar {
+  padding: 1rem 0;
+  transition: background-color 0.3s;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  margin-right: 1rem;
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+/* scrool spy */
+/* Navbar */
+.navbar {
+  padding: 1rem 0;
+  transition: background-color 0.3s ease;
+}
+/* Saat di posisi awal (belum scroll), tetap warna default */
+.nav-link.no-active {
+  color: #333 !important;
+}
+/* Navbar */
+.nav-link {
+  font-size: 1rem;
+  color: #000 !important; /* Warna hitam default */
+  transition: color 0.3s ease;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+/* Saat aktif atau di-scroll ke bagian terkait */
+.nav-link.active {
+  color: #007bff !important; /* Hanya ubah warna teks */
+  background-color: transparent !important; /* Hilangkan background */
+}
+
+/* Saat belum di-scroll, tetap warna hitam */
+.navbar.no-scroll .nav-link {
+  color: #000 !important; /* Semua teks navbar tetap hitam */
+}
+
+/* Hero Section (Carousel) */
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
   padding: 20px;
-  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
-nav .logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
+/* Section Styling */
+.section {
+  height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
 }
 
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+/* Responsif */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .nav-link {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .hero {
